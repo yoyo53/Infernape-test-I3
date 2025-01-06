@@ -1,6 +1,7 @@
 import { test, expect, chromium } from '@playwright/test'
 
 test('has title', async () => {
+  // TODO: remove 'slowMo' when done debugging
   const browser = await chromium.launch({ slowMo: 1000 })
   const page = await browser.newPage()
 

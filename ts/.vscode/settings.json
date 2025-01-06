@@ -1,6 +1,4 @@
 {
     "standard.enable": true,
-    "standard.options": {
-
-    }
+    "standard.autoFixOnSave": true,
 }
