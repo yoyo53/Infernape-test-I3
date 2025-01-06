@@ -1,6 +1,6 @@
 # Running tests
 
-First, fix thu URL in `playwright.config.ts`.
+First, fix the URL in `playwright.config.ts`.
 
 Then run:
 
