@@ -15,5 +15,5 @@ $ pip install -r requirements.txt
 $ playwright install --browser chromium
 
 # Run the tests
-$ pytest -vs --browser=chromium --slowmo=1000 --headed --base-url=https://<team>.<group>.hr.dmerej.info/
+$ pytest -vs --browser=chromium --slowmo=1000 --headed --base-url=https://<letter>.<group>.hr.dmerej.info/
 ```
