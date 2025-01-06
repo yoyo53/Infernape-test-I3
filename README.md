@@ -8,11 +8,11 @@ Make sure you can run the add-team test
 
 ## Step 2
 
-Use the playwright codegen command to generate some test code - put it under version control, next to the add-team test.
+Use the `playwright codegen` command to generate some test code - put it under version control, next to the add-team test.
 
 ## Step 3
 
-* Add a test for one of the bugs you’ve fond during first session - but write the code by hand this time
+* Add a test for one of the bugs you’ve fond during the first session - but write the code by hand this time
 
 * Refactor so hat you use a test fixture between each test to reset the database
 
