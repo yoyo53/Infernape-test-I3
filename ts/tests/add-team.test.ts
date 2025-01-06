@@ -12,11 +12,12 @@ test('has title', async () => {
   // Create a new team
   await page.goto('/add_team')
   const nameInput = page.locator('input[name="name"]')
-  const team_name = 'my team'
-  await nameInput.fill(team_name)
+  const teamName = 'my team'
+  await nameInput.fill(teamName)
   await page.click("text='Add'")
 
   // Check the team has been created
-  await page.goto("/teams")
-  await page.isVisible(`td:has-text('${team_name}')`)
+  await page.goto('/teams')
+  const isVisible = await page.isVisible(`td:has-text('${teamName}')`)
+  expect(isVisible).toBe(true)
 })
