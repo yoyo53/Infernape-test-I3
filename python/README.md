@@ -12,10 +12,10 @@ $ .venv\Scripts\activate.bat
 $ pip install -r requirements.txt
 
 # Install browser
-$ playwright install  chromium
+$ playwright install chromium
 
 # Run the tests
-$ pytest -vs --browser=chromium --slowmo=1000 --headed --base-url=https://a.lsi1.hr.dmerej.info/
+$ pytest -vs --browser=chromium --slowmo=1000 --headed --base-url=https://<letter>.<group>.hr.dmerej.info/
 ```
 
 ## Using `ipdb` as debugger
