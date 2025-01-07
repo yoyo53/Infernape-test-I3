@@ -7,12 +7,12 @@ $ python -m venv .venv
 # or
 $ python3 -m venv .venv
 $ source .venv/bin/activate
-# or
+# or (from cmd.exe, not PowerShell)
 $ .venv\Scripts\activate.bat
 $ pip install -r requirements.txt
 
 # Install browser
-$ playwright install --browser chromium
+$ playwright install  chromium
 
 # Run the tests
 $ pytest -vs --browser=chromium --slowmo=1000 --headed --base-url=https://<team>.<group>.hr.dmerej.info/
