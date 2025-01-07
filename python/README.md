@@ -17,3 +17,8 @@ $ playwright install  chromium
 # Run the tests
 $ pytest -vs --browser=chromium --slowmo=1000 --headed --base-url=https://<team>.<group>.hr.dmerej.info/
 ```
+
+## Using `ipdb` as debugger
+
+* Set the env var `PYTHONBREAKPOINT`  to `ipdb.set_trace`
+* Call the breakpoint() function where you want to start the interactive debugging
