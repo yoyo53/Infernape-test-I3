@@ -8,7 +8,7 @@ Make sure you can run the add-team test
 
 ## Step 2
 
-Use the `playwright codegen` command to generate some test code - put it under version control, next to the add-team test.
+Use the `playwright codegen` command to generate some test code and add it to the repositor next to the add-team test.
 
 ## Step 3
 
