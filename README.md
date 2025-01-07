@@ -18,7 +18,7 @@ Use the `playwright codegen` command to generate some test code and add it to th
 
 ## Step 4
 
-Add tests for all the bugs you’ve found
+Add tests for all the bugs you’ve found - make sure they are failing for the right reason, with good error messages.
 
 ## Step 5
 
