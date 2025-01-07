@@ -15,7 +15,7 @@ $ pip install -r requirements.txt
 $ playwright install  chromium
 
 # Run the tests
-$ pytest -vs --browser=chromium --slowmo=1000 --headed --base-url=https://<team>.<group>.hr.dmerej.info/
+$ pytest -vs --browser=chromium --slowmo=1000 --headed --base-url=https://a.lsi1.hr.dmerej.info/
 ```
 
 ## Using `ipdb` as debugger
