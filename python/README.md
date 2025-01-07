@@ -12,7 +12,7 @@ $ .venv\Scripts\activate.bat
 $ pip install -r requirements.txt
 
 # Install browser
-$ playwright install --browser chromium
+$ playwright install chromium
 
 # Run the tests
 $ pytest -vs --browser=chromium --slowmo=1000 --headed --base-url=https://<letter>.<group>.hr.dmerej.info/
