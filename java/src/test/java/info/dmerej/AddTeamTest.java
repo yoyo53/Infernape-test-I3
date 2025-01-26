@@ -18,7 +18,8 @@ public class AddTeamTest {
 
         // Set base URL for the new context
         var contextOptions = new Browser.NewContextOptions();
-        contextOptions.setBaseURL("https://<letter>.lsi1.hr.dmerej.info");
+        // TODO: fix the URL
+        contextOptions.setBaseURL("https://<letter>.<group>.hr.dmerej.info");
         var context = browser.newContext(contextOptions);
 
         var page = context.newPage();

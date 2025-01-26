@@ -7,7 +7,7 @@ export default defineConfig({
   testDir: './tests',
   fullyParallel: false,
   use: {
-    // Note: fix the URL here!
+    // TODO: fix the URL
     baseURL: 'https://<letter>.<group>.hr.dmerej.info',
 
     trace: 'on-first-retry'

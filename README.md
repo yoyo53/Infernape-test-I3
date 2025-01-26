@@ -4,7 +4,8 @@ Goal: write end-to-end browser integration tests for a web application
 
 ## Step 1
 
-Make sure you can run the add-team test
+Choose a programming language and make sure you can run the `add-team`
+test - you'll have to fix the URL (see the TODO comment)
 
 ## Step 2
 
