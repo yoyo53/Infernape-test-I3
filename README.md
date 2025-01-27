@@ -11,6 +11,13 @@ test - you'll have to fix the URL (see the TODO comment)
 
 Use the `playwright codegen` command to generate some test code and add it to the repository next to the add-team test.
 
+In Java, the command line looks like this:
+
+```console
+$ ./mvnw exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="codegen https://<letter>.<group>.hr.dmerej.info"
+```
+
+
 ## Step 3
 
 * Add a test for one of the bugs you’ve fond during the first session - but write the code by hand this time
