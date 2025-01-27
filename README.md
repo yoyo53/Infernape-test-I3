@@ -22,7 +22,7 @@ $ ./mvnw exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.arg
 
 * Add a test for one of the bugs you’ve fond during the first session - but write the code by hand this time
 
-* Refactor so hat you use a test fixture between each test to reset the database
+* Refactor so that you use a test fixture between each test to reset the database
 
 ## Step 4
 
