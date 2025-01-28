@@ -9,7 +9,7 @@ test - you'll have to fix the URL (see the TODO comment)
 
 ## Step 2
 
-Use the `playwright codegen` command to generate *one* test and add it to the repository next to the add-team test.
+Use the `playwright codegen` command to generate *one* test and add it to the repository in a new file next to the existing add-team test.
 
 In Java, the command line looks like this:
 
