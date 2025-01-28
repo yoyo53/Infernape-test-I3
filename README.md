@@ -9,7 +9,7 @@ test - you'll have to fix the URL (see the TODO comment)
 
 ## Step 2
 
-Use the `playwright codegen` command to generate some test code and add it to the repository next to the add-team test.
+Use the `playwright codegen` command to generate *one* test and add it to the repository next to the add-team test.
 
 In Java, the command line looks like this:
 
@@ -20,8 +20,7 @@ $ ./mvnw exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.arg
 
 ## Step 3
 
-* Add a test for one of the bugs you’ve fond during the first session - but write the code by hand this time
-
+* Add a test for one of the bugs you’ve fond during the first session - but *without using codegen* this time.
 * Refactor so that you use a test fixture between each test to reset the database
 
 ## Step 4
