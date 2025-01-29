@@ -29,6 +29,11 @@ def run(playwright: Playwright) -> None:
     expect(page.locator("tbody")).to_contain_text("test@mail.com")
     expect(page.locator("tbody")).to_contain_text("Test")
     expect(page.locator("tbody")).to_match_aria_snapshot("- cell \"Test\"")
+    page.get_by_role("link", name="Edit").click()
+    page.get_by_role("link", name="Update basic info").click()
+    page.get_by_role("navigation").click()
+    page.get_by_role("link", name="Home").click()
+    page.get_by_role("link", name="List employees").click()
 
     # ---------------------
     context.close()
