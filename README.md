@@ -1,36 +1,25 @@
-# Playwright Kata
+# Running tests
 
-Goal: write end-to-end browser integration tests for a web application
+```
+# Install Python dependencies
 
-## Step 1
+$ python -m venv .venv 
+# or
+$ python3 -m venv .venv
+$ source .venv/bin/activate
+# or (from cmd.exe, not PowerShell)
+$ .venv\Scripts\activate.bat
+$ pip install -r requirements.txt
 
-Choose a programming language and make sure you can run the `add-team`
-test - you'll have to fix the URL (see the TODO comment)
+# Install browser
+$ playwright install chromium
 
-## Step 2
-
-Use the `playwright codegen` command to generate *one* test and add it to the repository in a new file next to the existing add-team test.
-
-In Java, the command line looks like this:
-
-```console
-$ ./mvnw exec:java -e -D exec.mainClass=com.microsoft.playwright.CLI -D exec.args="codegen https://<letter>.<group>.hr.dmerej.info"
+# Run the tests
+# TODO: fix the URL
+$ pytest -vs --browser=chromium --slowmo=1000 --headed --base-url=https://<letter>.<group>.hr.dmerej.info/
 ```
 
+## Using `ipdb` as debugger
 
-## Step 3
-
-* Add a test for one of the bugs you’ve fond during the first session - but *without using codegen* this time.
-* Refactor so that you use a test fixture between each test to reset the database
-
-## Step 4
-
-Add tests for all the bugs you’ve found - make sure they are failing for the right reason, with good error messages.
-
-## Step 5
-
-Refactor using the [Page object model](https://playwright.dev/python/docs/pom)
-
-## Step 6
-
-Compare the code written using the Page Object Model with the one playwright automatically generated.
+* Set the env var `PYTHONBREAKPOINT`  to `ipdb.set_trace`
+* Call the breakpoint() function where you want to start the interactive debugging
