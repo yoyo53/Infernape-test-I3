@@ -1,12 +1,9 @@
 import pytest
-
-@pytest.fixture
-def reset_db(page):
-    page.goto("/reset_db")
-    proceed_button = page.locator("button:has-text('proceed')")
-    proceed_button.click()
+from fixtures import reset_db, check_response
 
 def test_add(page, reset_db):
+
+    page.on("response", check_response)
 
     # Fill form
     page.goto("/add_employee")
