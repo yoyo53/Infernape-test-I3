@@ -17,4 +17,4 @@ def test_add_employee_with_same_email(page, reset_db, check_http_errors):
     employee_page.goto_add_employee()
     employee_page.fill_employee_form(user2)
     
-    assert not employee_page.employee_exists(user2.get_email())
+    assert not employee_page.employee_exists(user2.get_email()), "User with the same email should not be added again"
