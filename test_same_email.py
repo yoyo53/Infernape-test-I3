@@ -1,14 +1,16 @@
-import re
-from playwright.sync_api import Playwright, sync_playwright, expect
+# import re
+# from playwright.sync_api import Playwright, sync_playwright, expect
+import pytest
 
 
-def run(playwright: Playwright) -> None:
-    browser = playwright.chromium.launch(headless=False)
-    context = browser.new_context()
-    page = context.new_page()
+@pytest.fixture
+def reset_db(page):
+    page.goto("/reset_db")
+    proceed_button = page.locator("button:has-text('proceed')")
+    proceed_button.click()
+
+def test_add_employee_with_same_email(page, reset_db):
     page.goto("https://i.se2.hr.dmerej.info/")
-    page.get_by_role("link", name="Add new employee").click()
-    page.get_by_placeholder("Name").click()
     page.get_by_role("link", name="Add new employee").click()
     page.get_by_placeholder("Name").click()
     page.get_by_placeholder("Name").fill("Hugo")
@@ -28,7 +30,7 @@ def run(playwright: Playwright) -> None:
     page.get_by_placeholder("Job title").fill("JobTitle")
     page.get_by_placeholder("Job title").press("Tab")
     page.get_by_role("button", name="Add").click()
-    expect(page.locator("tbody")).to_contain_text("hugotest@mail.com")
+    assert page.locator("tbody").inner_text().find("hugotest@mail.com") != -1
     page.get_by_role("link", name="Home").click()
     page.get_by_role("link", name="Add new employee").click()
     page.get_by_placeholder("Name").click()
@@ -48,13 +50,4 @@ def run(playwright: Playwright) -> None:
     page.get_by_placeholder("Job title").click()
     page.get_by_placeholder("Job title").fill("Job bidon")
     page.get_by_role("button", name="Add").click()
-    expect(page.locator("tbody")).to_contain_text("hugotest@mail.com")
-    expect(page.locator("tbody")).not_to_contain_text("hugo2")
-    
-    # ---------------------
-    context.close()
-    browser.close()
-
-
-with sync_playwright() as playwright:
-    run(playwright)
+    assert page.locator("tbody").inner_text().find("hugo2") == -1
