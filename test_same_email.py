@@ -16,7 +16,6 @@ def test_add_employee_with_same_email(page, reset_db, check_http_errors):
     
     assert employee_page.employee_exists(user1.email)
     
-    page.get_by_role("link", name="Home").click()
     employee_page.goto_add_employee()
     employee_page.fill_employee_form(user2)
     
