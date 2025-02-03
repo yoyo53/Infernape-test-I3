@@ -9,14 +9,14 @@ class EmployeePage:
         self.page.goto("/add_employee")
     
     def fill_employee_form(self, user):
-        self.page.locator("#id_name").fill(user.get_name())
-        self.page.locator("#id_email").fill(user.get_email())
-        self.page.locator("#id_address_line1").fill(user.get_address1())
-        self.page.locator("#id_address_line2").fill(user.get_address2())
-        self.page.locator("#id_city").fill(user.get_city())
-        self.page.locator("#id_zip_code").fill(user.get_zip_code())
-        self.page.locator("#id_hiring_date").fill(user.get_hiring_date())
-        self.page.locator("#id_job_title").fill(user.get_job_title())
+        self.page.locator("#id_name").fill(user.name)
+        self.page.locator("#id_email").fill(user.email)
+        self.page.locator("#id_address_line1").fill(user.address.address1)
+        self.page.locator("#id_address_line2").fill(user.address.address2)
+        self.page.locator("#id_city").fill(user.address.city)
+        self.page.locator("#id_zip_code").fill(user.address.zip_code)
+        self.page.locator("#id_hiring_date").fill(user.hiring_date)
+        self.page.locator("#id_job_title").fill(user.job_title)
         self.page.get_by_role("button", name="Add").click()
     
     def update_address(self, new_address):
